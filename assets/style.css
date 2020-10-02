@@ -1,0 +1,62 @@
+.p {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonsbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/* About section */
+/* #happyTravels {
+    text-align: justify;
+    
+} */
+
+
+/* Styling for date-picker */
+.ui-datepicker {
+    background: #FFFFFF;
+    border: 1px solid #555;
+    color: #000000;
+}
+
+/* styling for news section */
+
+.newsHeadline {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.departureDate {
+    font-size: large;
+    font-weight: bold;
+}
+
+.button {
+    text-align: center;
+    margin-left: 10px;
+}

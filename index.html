@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety First Travel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<!--Hero Title and Logo-->
+    <section class="hero is-primary is-bold is-small">
+        <div class="hero-body">
+            <div class="container">
+                <figure class="image is-3by1">
+                    <img src="assets/logo.png" alt="Safety First Travel Logo">
+                </figure>
+                <h1 class="title" align="center" height=150px>
+                    Safety First Travel
+                </h1>
+                <h2 class="subtitle" align="center">
+                    Your First Step to Your Perfect Trip
+                </h2>
+            </div>
+        </div>
+    </section>
+<!--First section of tiles-->
+    <section class="section">
+        <div class="container">
+            <div class="tile is-ancestor">
+<!--Info tile-->
+                <article class="tile is-parent notification is-success">
+                    <div class="content">
+                        <p class="title">About the App</p>
+                        <p class="subtitle" id="happyTravels">This website is designed to prepare airline travelers in proximity to major US airport hubs for upcoming international trips. After entering all of your pre-flight information (i.e., dates, origin, and destination), you will be presented with travel advisory information, flight quotes, and news.</p>
+                        <p class="subtitle">Happy Travels!</p>
+                        <div class="content"></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="tile is-parent">
+                <div class="tile is-child" align="left">
+                    <label>Departure Date</label>
+                    <input id="departure" type="text" autocomplete="off">
+                </div>
+                <div class="tile is-child" align="right">
+                    <label>Return Date</label>
+                    <input id="returning" type="text" autocomplete="off">
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <div class="tile is-child" align="left">
+                    <label>Origin (USA)</label>
+                    <input list="origins" id="origin">
+                    <datalist id="origins"></datalist>
+                </div>
+                <div class="tile is-child" align="right">
+                    <label>Destination</label>
+                    <input list="destinations" id="dest-location">
+                    <datalist id="destinations"></datalist>
+                </div>
+            </div>
+        </div>
+<!--Search Buttons tile-->
+    <!--<section class="section">-->
+        <div class="container" id="buttons">
+            <div class="tile is-parent is-12">
+                <div class="tile is-child" class="center" id="buttonsbox">
+                    <button id="search-btn" class="button is-primary">Search</button>
+                    <button id="clear-btn" class="button is-primary is-outlined" onclick="location.reload();"
+                        value="Reset form">Clear Results</button>
+                </div>
+            </div>
+        </div>
+    <!--Travel tile-->
+        <div class="container">
+            <div class="tile is-full is-parent">
+                <div class="tile is-child is-half box" class="content">
+                    <span class="card-title">Travel Advisory:</span>
+                    <p id="travel-advisory"></p>
+                    <hr>
+                    <span class="card-title">Link to Travel Advisory:</span>
+                    <p id="advisory-url"> </p>
+                </div>
+                <div class="tile is-child is-half box">
+                    <span class="card-title">Available Flight Prices:</span>
+                    <p id="flight-quote1"></p>
+                    <p id="flight-quote2"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Flight and News tile-->
+    <section class="section">
+        <div class="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child is-half box">
+                        <div class="item4">
+                            <p class="newsHeadline" align="center">Current News<br>About Your Destination</p><br>
+                            <div id="forecast">
+                                <div class="nested">
+                                    <div id="news1">
+                                        <p id="headline1" class="headline"></p>
+                                        <p id="storyDate1"></p><br>
+                                        <p id="caption1"></p><br>
+                                        <p id="storySource1"></p>
+                                        <p id="articleURL1"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news2">
+                                        <p id="headline2" class="headline"></p>
+                                        <p id="storyDate2"></p><br>
+                                        <p id="caption2"></p><br>
+                                        <p id="storySource2"></p>
+                                        <p id="articleURL2"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news3">
+                                        <p id="headline3" class="headline"></p>
+                                        <p id="storyDate3"></p><br>
+                                        <p id="caption3"></p><br>
+                                        <p id="storySource3"></p>
+                                        <p id="articleURL3"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news4">
+                                        <p id="headline4" class="headline"></p>
+                                        <p id="storyDate4"></p><br>
+                                        <p id="caption4"></p><br>
+                                        <p id="storySource4"></p>
+                                        <p id="articleURL4"></p>
+                                    </div>
+                                    <br>
+                                    <div id="news5">
+                                        <p id="headline5" class="headline"></p>
+                                        <p id="storyDate5"></p><br>
+                                        <p id="caption5"></p><br>
+                                        <p id="storySource5"></p>
+                                        <p id="articleURL5"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/countryCodes.js"></script>
+    <script src="assets/originAirports.js"></script>
+    <script src="assets/destinationAirports.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
